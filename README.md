@@ -1,5 +1,5 @@
 # Windowed Mode plugin (for GTA3, VC, SA)
-[DOWNLOAD](https://github.com/ThirteenAG/III.VC.SA.WindowedMode/releases/latest)
+[DOWNLOAD](https://github.com/Atorizil/III.VC.SA.WindowedMode/releases/latest)
 ----
 This plugin allows to run game in window as well in windowed full screen mode.
 Originally created by **maxorator** as part of **Maxo's Vehicle Loader** for Vice City.
