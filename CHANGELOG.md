@@ -1,3 +1,6 @@
+## 2.2
+- added support for the Japanese version of GTA VC
+
 ## 2.0
 - added error message about unsupported game version
 - added error message about missing ASI Loader

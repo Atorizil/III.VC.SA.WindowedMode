@@ -1,6 +1,7 @@
 #include "WindowedMode.h"
 #include "Windowed_Gta3.h"
 #include "Windowed_GtaVC.h"
+#include "Windowed_GtaVC_JP.h"
 #include "Windowed_GtaSA.h"
 #include <dwmapi.h>
 
@@ -749,6 +750,7 @@ bool WindowedMode::IsMainMenuVisible() const
 		}
 
 		case GTA_VC:
+		case GTA_VC_JP:
 		{
 			auto mgr = (CMenuManagerVC*)frontEndMenuManager;
 			return mgr->m_bMenuActive;
@@ -777,6 +779,7 @@ void WindowedMode::SwitchMainMenu(bool show)
 			break;
 
 		case GTA_VC:
+		case GTA_VC_JP:
 		{
 			auto mgr = (CMenuManagerVC*)frontEndMenuManager;
 			if (show == mgr->m_bMenuActive) break; // already done
@@ -835,6 +838,10 @@ void WindowedMode::UpdatePostEffect()
 		case GameTitle::GTA_VC:
 			injector::cstd<void(RwCamera*)>::call(0x55CE20, *(RwCamera**)0x8100BC); // CMBlurMotion::BlurOpen(RwCamera*)
 			break;
+
+		case GameTitle::GTA_VC_JP:
+			injector::cstd<void(RwCamera*)>::call(0x55CFE0, *(RwCamera**)0x80D0C4); // CMBlurMotion::BlurOpen(RwCamera*)
+			break;
 			
 		case GameTitle::GTA_SA:
 		{
@@ -876,6 +883,7 @@ void WindowedMode::UpdateWidescreenFix()
 				break;
 			
 			case GameTitle::GTA_VC:
+			case GameTitle::GTA_VC_JP:
 				widescreenFix = GetModuleHandle("GTAVC.WidescreenFix.asi");
 				break;
 			

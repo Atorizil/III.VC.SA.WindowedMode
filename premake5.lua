@@ -11,7 +11,7 @@ xcopy /Y \"$(TargetPath)\" \"$(GTA_" .. gameAbbr .. "_DIR)\\scripts\" \r\n\
 end
 
 workspace "III.VC.SA.WindowedMode"
-   configurations { "Release", "Gta3", "GtaVC", "GtaSA" }
+   configurations { "Release", "Gta3", "GtaVC", "GtaVC_JP", "GtaSA" }
    platforms { "Win32" }
    architecture "x32"
    characterset ("MBCS")
@@ -56,6 +56,11 @@ project "III.VC.SA.WindowedMode"
       defines { "DEBUG" }
       symbols "on"
       setupDebugger("VC", "gta-vc.exe")
+
+   filter "configurations:GtaVC_JP"
+      defines { "DEBUG" }
+      symbols "on"
+      setupDebugger("VC_JP", "gta-vc.exe")
       
    filter "configurations:GtaSA"
       defines { "DEBUG" }

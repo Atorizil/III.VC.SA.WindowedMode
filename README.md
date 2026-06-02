@@ -14,6 +14,7 @@ Originally created by **maxorator** as part of **Maxo's Vehicle Loader** for Vic
 ## Supported games
 * Classic GTA 3 v1.0
 * Classic GTA Vice City v1.0
+* Classic GTA Vice City v3.0 JP
 * Classic GTA San Andreas v1.0 US
 
 ----
