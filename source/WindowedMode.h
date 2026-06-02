@@ -8,10 +8,11 @@ public:
 	static constexpr POINT Resolution_Default = { 640, 448 }; // default GTA's PS2 resolution
 	static constexpr POINT Resolution_Min = { Resolution_Default.x / 4, Resolution_Default.y / 4 };
 
-	enum GameTitle : BYTE { GTA_3, GTA_VC, GTA_SA };
+	enum GameTitle : BYTE { GTA_3, GTA_VC, GTA_VC_JP, GTA_SA };
 
 	static void InitGta3();
 	static void InitGtaVC();
+	static void InitGtaVCJP();
 	static void InitGtaSA();
 
 	// game internals

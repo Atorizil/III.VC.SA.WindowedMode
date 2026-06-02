@@ -15,6 +15,10 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID reserved)
 		{
 			WindowedMode::InitGtaVC();
 		}
+		else if (!_stricmp(name, "GTA VC 3.0.0.0 JP"))
+		{
+			WindowedMode::InitGtaVCJP();
+		}
 		else if (!_stricmp(name, "GTA SA 1.0.0.0 US"))
 		{
 			WindowedMode::InitGtaSA();
